@@ -1,0 +1,224 @@
+'''
+n = input ('Enter n :')
+a = []
+print(type(n))
+for i in range(n):
+    row = []
+    begin = 0
+    if i % 2 == 0:
+        begin = 1
+    for j in range(begin,begin+n):
+             row.append(j%2)
+    a.append(row)
+
+for i in a:
+    for x in i:
+         print(x,end = "")
+    print()
+
+s = '####hello###'
+s.strip('#')
+print(s.lstrip('#'))
+
+#JOIN FUNCTION
+
+print('-'.join('010.1234.5678'.split('.')))
+
+s = 'ABCDEFGHI,JKLMNO,PQRSTU,VWXYZ'
+END = s.endswith('C',1,3)
+print(END)
+#REPLACE FUNTION
+replaceAll = s.replace(',','')
+print(replaceAll)
+replace_t1 = s.replace(',','',1)
+print(replace_t1)
+replace_t2 = s.replace(',','',2)
+print(replace_t2)
+replace_t3 = s.replace(',','',3)
+print(replace_t3)
+
+#from collecions import defaultdict
+
+keys = ['a','b','c','d','d']
+x = dict.fromkeys(keys,100)
+#x = defaultdict(int)
+print(x['z'])
+'''
+"""
+from collecions import defaultdict
+
+keys = ['a','b','c','d','d']
+x = dict.fromkeys(keys,100)
+x = defaultdict(int)
+print(x['z'])
+"""
+
+"""
+from collecions import defaultdict
+
+keys = ['a','b','c','d','d']
+x = dict.fromkeys(keys,100)
+x = defaultdict(int)
+print(x['z'])
+
+
+ 
+items = {'Coffee':7,'Pen':3,"Papercup":2,'Milk':1,'Coke':4,'Book':5}
+print('Select menu')
+print("1) Check-stock 2) Warehousing 3) release 4) exit")
+choice2 = int(input('Select menu: '))
+while True:
+    match choice2:
+        case 1:
+            print('Check Stock: ')
+            choice1 = str(input('Enter item : ')).capitalize()
+           # choice = choice1.upper()
+            if choice1 in items.keys():
+                 print('Stock is :',items[choice1])
+        case 2:
+            print("Warehousing")
+            print('Add to warehouse')
+            new_key = input("enter key :")
+            new_value = input("enter value of key :")
+            items[new_key] = new_value
+            print(items)
+        case 3:
+            print('Release / Update')
+            item,quantity = input("Enter item and quantity :").capitalize().split()
+            if item in items and int(quantity) <= items[item]:
+                items[item] -= int(quantity)
+            print(items)
+    choice = input("Press 4 to exit or any key to continue :")
+    if choice == 4:
+        break
+    print("1) Check-stock 2) Warehousing 3) release 4) exit")
+    choice2 = int(input('Select menu: '))  
+
+"""
+'''
+student_tup = ((211101,'David Doe','010-1234-4500'),(211102,'John Smith','010-2230-6540'),(211103,'Jane Carter','010-3232-7788'))
+
+for x in student_tup:
+    print({x[0]: [x[1],x[2]]})
+'''
+student_tup = ((211101,'David Doe','010-1234-4500'),(211102,'John Smith','010-2230-6540'),(211103,'Jane Carter','010-3232-7788'))
+
+#for i in student_tup:
+ #   student_tup = dict.fromkeys(i(:1), list(i(1:)))
+#    print(student_tup)
+#  print(x,y,z)
+#for x in student_tup:
+ #   print({x[0]: [x[1],x[2]]})
+student_ID = str(input('Enter a student id number :'))
+for num in student_tup:
+    if student_ID ==  num[0]:
+        print('Name :',num[1])
+        print('Phone number :',num[2])
+'''
+'''
+'''
+items_d = {'Coffee':7,'Pen':3,"Papercup":2,'Milk':1,'Coke':4,'Book':5}
+print(items_d.items)
+for name , phone_num in items_d.items():
+    print(name ,':',phone_num)
+'''
+'''
+import datetime
+print(datetime.datetime.now())
+today = datetime.date.today()
+print(today)
+print(today.year)
+print(today.month)
+print(today.day)
+print(dir(datetime))
+start_time = datetime.datetime.now()
+print(start_time.replace(month =12, day = 25))
+import datetime as dt
+start_time = dt.datetime.now()
+print(start_time.replace(month =12, day = 25))
+
+from datetime import datetime as dt
+start_time = dt.now()
+print(start_time.replace(month =12, day = 25))
+
+from datetime import * 
+today = date.today
+print(today)
+#Time module in Unix
+import time
+seconds = time.time()
+print('Time after epoxy = ',seconds)
+
+#Mathematics(math) module
+import math as m
+print(dir(m))
+print(m.pow(3,3))
+print(m.fabs(-99))
+print(m.ceil(2.1))
+print(m.floor(2.1))
+'''
+'''
+#SET DATATYPES
+ # Python 3 program for aliquot sum
+ 
+# Function to calculate sum of
+# all proper divisors
+def aliquotSum(n) :
+    sm = 0
+    for i in range(1,n) :
+        if (n % i == 0) :
+            sm = sm + i    
+     
+    return sm # return sum
+ 
+ 
+# Driver Code
+n = int(input('Enter a number :'))
+print(aliquotSum(n))
+'''
+'''
+s1 = {1,32,3}
+s2 = {10,20,30}
+print(s1.isdisjoint(s2))
+#SET DATATYPES
+A ={1,3,2,4,6,5}
+B ={2,4}
+res =set()
+ 
+for i in A:
+    for j in B:
+        res = res | {(i,j)}
+ 
+AXB = res
+print('A = ',A)
+print('B =',B)
+print('AXB =',AXB)
+
+for x in sorted(A):
+    print(x,end='')
+'''
+'''
+#USE THE FOR  STATEMNT IN THE SHORTHAND
+
+a = {i for i in  'apple'}
+print(a)
+
+b = {i for i in 'pineaple' if i not in 'apl'}
+print(b)
+
+#logical computation functions applicable to a set
+
+a_set = {1,0,2,3,3}
+
+print(all(a_set), any(a_set))
+'''
+'''
+num = 10
+divisors = []
+
+for i in range(2,num):
+    if num % i == 0:
+        divisors.append(i)
+
+print(num,'is true aliquot :',divisors)
+'''
