@@ -245,6 +245,19 @@ for num in student_tup:
         print('Phone number :',num[2])
 '''
 '''
+'''
+mylist = [(1,2),(4,5),(4,2),(3,1),(9,4)]
+user1,user2 = input('Enter two numbers').split()
+num1 = int(num1)
+num2 = int(num2)
+#user1,user2 = int
+
+print(user1,user2)
+
+for i in range(len(mylist)):
+    if (mylist[i] == user1,user2):
+'''
+
 
 
 
