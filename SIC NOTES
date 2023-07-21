@@ -1,3 +1,4 @@
+## Dictionary Methods ##
 # Dictionary Setdefault() 
 returns value of the key if it is in the dictionary
 if it is not there it updates the dictionary
@@ -7,3 +8,37 @@ returns defualt values if the key is not in the dictionary and defualt value is 
 #Dictionary Update()
 It updates the first dictionary to the second dictionary
 Adds another dictionary to another dictionary
+Takes key-value pairs only
+It updates the other dictionary with the elements of the other dictionary( dict2.update(dict1) )
+
+# RESEARCH #
+#Dictionary pop()
+it deletes the last key-value pair starting from the last key-value pair and then returns the deleted item
+
+#Dictionary popItem()
+#Dictionary clear()
+
+# RESEARCH #
+#Dictionary get()
+Returns the value for specified key if key is in dictionary 
+Returns defualt value if the key is not in the dictionary and value is not specified
+Returns defualt value(NONE) if the key is not in the dictionary the value specified is in the dictionary
+
+#Dictionary keys()
+Returns the list of keys in the dictionary
+
+#Dictionary values()
+Returns a list of values
+
+#Dictionary items()
+Returns tuple of tuples of key-value pairs
+
+#Dictionary split()
+it splits strings
+By defualt it checks for spaces and returns list of strings
+If defined in the paranthesis split where the defined character is
+
+max()
+file.splitlines()
+fromkeys(iterable,value)
+
