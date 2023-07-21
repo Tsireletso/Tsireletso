@@ -1,0 +1,9 @@
+# Dictionary Setdefault() 
+returns value of the key if it is in the dictionary
+if it is not there it updates the dictionary
+returns none if the key is not in the dictionary and default value is not specified
+returns defualt values if the key is not in the dictionary and defualt value is specified
+
+#Dictionary Update()
+It updates the first dictionary to the second dictionary
+Adds another dictionary to another dictionary
