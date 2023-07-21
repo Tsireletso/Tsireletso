@@ -13,9 +13,10 @@ It updates the other dictionary with the elements of the other dictionary( dict2
 
 # RESEARCH #
 #Dictionary pop()
-it deletes the last key-value pair starting from the last key-value pair and then returns the deleted item
+it deletes the last key-value pair starting from the last key-value pair and then returns the deleted value
 
 #Dictionary popItem()
+it deletes the last key-value pair starting from the last key-value pair and then returns the deleted item (key-value) pair
 #Dictionary clear()
 
 # RESEARCH #
