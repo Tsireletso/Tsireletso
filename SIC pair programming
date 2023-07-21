@@ -223,7 +223,27 @@ for i in range(2,num):
 print(num,'is true aliquot :',divisors)
 '''
 '''
+#Pair programming UNIT 15
+student_tup = [('211101','David Doe','010-1234-4500'),('211102','John Smith','010-2230-6540'),('211103','Jane Carter','010-3232-7788')]
+dict1 = {}
+for i in student_tup:
+    dict1.update({i[0] : list(i[1:])})
 
+for x in dict1.items():
+    print(f'{x[0]}:{x[1][0]}')
+    
+ID = input('Enter student number: ')
+for x in student_tup:
+    if ID == x[0]:
+        y, z = x[1],x[2]
+        print(ID,'student is',y,'and phone number is', z)
+'''
+student_ID = str(input('Enter a student id number :'))
+for num in student_tup:
+    if student_ID ==  num[0]:
+        print('Name :',num[1])
+        print('Phone number :',num[2])
+'''
 '''
 
 
