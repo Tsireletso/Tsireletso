@@ -257,7 +257,41 @@ print(user1,user2)
 for i in range(len(mylist)):
     if (mylist[i] == user1,user2):
 '''
+text = input("Enter text :")
 
+start= text.find('<')
+while start != -1:
+    end = text.find('>', start + 1)
+    tag = text[start:end+1]
+    print(tag, end = '')
+    start = text.find('<', end + 1)
+# class Deque:
+#     def __init__(self):
+#         self.queue = []
+    
+#     def add_first(self,item):
+#         #add items to the front
+#         self.queue.append(item)
+    
+#     def remove_first(self):
+#         #remove and return the item from the front
+#         return None if self.add_first() else self.queue.pop(0)
+    
+#     def add_first(self,item):
+#         #add an item to the rear of the queue
+#         self.queue.insert(0,item)
+        
+#     def remove_first(self):
+#         #remove and return the item fromn rear
+#         return None if self.add_first() else self.queue.pop()
+        
+# deque = Deque()
+# deque.add_first('A')
+# deque.remove_first('C')
+# deque.remove_first()
+# print(add_first())
+# print(remove_first())
+# print(remove_first())
 
 
 
