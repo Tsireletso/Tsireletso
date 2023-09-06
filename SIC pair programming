@@ -349,7 +349,36 @@ print(add_first())
 print(remove_first())
 print(remove_first())
 
+# maximum=int(input('enter the number of maximum'))
+# number=int(input('enter the number you are guessing'))
+# count=0
+# low,high=1,maximum
+# while low<high:
+#     mid=(low + high)//2
+#     count+=1
+#     if mid==number:
+#         print(f"your number is {number}")
+#         break
+#     elif mid>number:
+#         high=mid -1
+#     else:
+#         low=mid +1
+# print(f"total{count}times are searched")    
 
+def search_insert_positions(nums,x):
+   # nums = []
+    for i in range(len(nums)):
+        if nums[i] > x:
+            return i
+    return len(nums)
+
+    
+nums = [10,20,40,50,60,80]
+x = int(input('input a number to insert :'))
+pos = search_insert_positions(nums,x)
+print(f'{x} should be inserted at position {pos}.')
+nums.insert(pos,x)
+print(nums)
 
 
 
