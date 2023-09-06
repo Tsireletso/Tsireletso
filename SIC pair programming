@@ -322,7 +322,32 @@ def checker(tags):
 str = input("enter a html tag :")
 print('matched' if checker(str) else "not matched")
     
-
+class Deque:
+   def __init__(self):
+         self.queue = []
+    
+   def add_first(self,item):
+#         #add items to the front
+         self.queue.append(item)
+   def remove_first(self):
+        #remove and return the item from the front
+       return None if self.add_first() else self.queue.pop(0)
+    
+   def add_first(self,item):
+        #add an item to the rear of the queue
+       self.queue.append(item)
+        
+    def remove_first(self):
+        #remove and return the item fromn rear
+         return None if self.add_first() else self.queue.pop()
+        
+deque = Deque()
+deque.add_first('A')
+deque.remove_first('C')
+deque.remove_first()
+print(add_first())
+print(remove_first())
+print(remove_first())
 
 
 
