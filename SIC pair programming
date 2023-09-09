@@ -403,7 +403,41 @@ print(nums)
 # s = [50,30,40,10,20]
 # bubblesort(s)
 # print(s)
+def partition(arr,  l,  h):
+    high = arr[h]
+    x = l
+    for i in range(l,h):
+        if (arr[i] < high):   #If arr[i] is less than high, then swap arr[x] with arr[i]
+            temp = arr[x]
+            arr[x]=arr[i]
+            arr[i]=temp
+            x+=1
+    temp = arr[x]           #swap arr[x] with arr[h]
+    arr[x]=arr[h]
+    arr[h]=temp
+    return x
 
+def KthLargestElement(arr, n, k):
+    if (n == 1):
+        return arr[0]
+    l = 0
+    h = n - 1
+    target = n-k
+    while (l <= h):
+        pivot = partition(arr, l, h)  #Initializing pivot with the value returned by partition function
+        if(pivot < target):    #If the pivot is less than the target, then we have to go to the right side
+            l = pivot + 1;
+        elif(pivot > target):  #If the pivot is greater than the target, then we have to go to the left side
+            h = pivot - 1
+        else:             #If the pivot is equal to the target, return arr[pivot]
+            return arr[pivot]
+    return -1
+
+arr = [2,1,4,6,3,9]
+n = len(arr)
+k = 3
+x = KthLargestElement(arr, n, k)
+print("Kth largest element is ",x)
 
 
 
